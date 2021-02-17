@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> deletedIndexes;
     private final String DELETED_KEY = "deleted";
 
-    private AdapterView.OnItemClickListener listOnItemClickListener = new AdapterView.OnItemClickListener() {
+    private final AdapterView.OnItemClickListener listOnItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             content.remove(position);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private SwipeRefreshLayout.OnRefreshListener swipeOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+    private final SwipeRefreshLayout.OnRefreshListener swipeOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
             getContentFromSharedPrefs();
